@@ -18,8 +18,9 @@ Call Stack (most recent call first):
   CMakeLists.txt:3 (sel4_tutorials_regenerate_tutorial)
 ``````
 
-Modification on CMakeLists.txt(/path/to/repo/root/camkes-vm-crossvm/CMakeLists.txt)
+Modification on CMakeLists.txt(`/path/to/repo/root/camkes-vm-crossvm/CMakeLists.txt`)
 ``````
 -if(NOT "${KernelX86Sel4Arch}" STREQUAL "x86_64")
 +if(NOT "${KernelSel4Arch}" STREQUAL "x86_64")
 ``````
+Then execute `cmake -G Ninja -DTUT_ARCH=x86_64 -DFORCE_IOMMU=ON -DTUTORIAL_DIR=camkes-vm-crossvm -C ../projects/sel4-tutorials/settings.cmake /path/to/repo/root/camkes-vm-crossvm` in `/path/to/repo/root/camkes-vm-crossvm_build`
